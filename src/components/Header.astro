@@ -1,0 +1,35 @@
+---
+---
+
+<header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-800">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <div class="text-2xl font-bold text-accent">
+      JD<span class="text-slate-100">.</span>
+    </div>
+    <ul class="hidden md:flex gap-8 items-center">
+      <li><a href="#about" class="hover:text-accent transition">About</a></li>
+      <li><a href="#skills" class="hover:text-accent transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
+      <li><a href="#experience" class="hover:text-accent transition">Experience</a></li>
+      <li>
+        <a href="#contact" class="px-4 py-2 bg-accent text-slate-950 rounded-lg hover:bg-blue-500 transition">
+          Contact
+        </a>
+      </li>
+    </ul>
+    <button id="menu-toggle" class="md:hidden text-accent">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      console.log('Menu toggle clicked');
+    });
+  }
+</script>

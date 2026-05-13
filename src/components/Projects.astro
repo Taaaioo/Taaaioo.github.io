@@ -1,0 +1,120 @@
+---
+import projectEcommerce from '../assets/project-ecommerce.svg';
+import projectTasks from '../assets/project-tasks.svg';
+import projectAnalytics from '../assets/project-analytics.svg';
+import projectOpensource from '../assets/project-opensource.svg';
+---
+
+<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50 parallax-container relative">
+  <!-- Parallax background elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-20 right-10 w-48 h-48 bg-accent rounded-full opacity-5 blur-3xl animate-rotate"></div>
+    <div class="absolute bottom-20 left-10 w-32 h-32 bg-blue-600 rounded-full opacity-5 blur-3xl animate-pulse-slow"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-50 animate-slide-up">Featured Projects</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-accent transition-all duration-300 group hover-lift animate-slide-up">
+        <div class="relative bg-gradient-to-br from-green-500/20 to-green-600/20 h-48 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-float">
+            <img src={projectEcommerce.src} alt="E-Commerce" class="w-full h-full object-cover"/>
+          </div>
+          <svg class="w-24 h-24 text-accent opacity-50 group-hover:opacity-100 transition relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-slate-50">E-Commerce Platform</h3>
+          <p class="text-slate-400 mb-4">
+            A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include product catalog, 
+            shopping cart, payment integration, and admin dashboard.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Node.js</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">MongoDB</span>
+          </div>
+          <a href="https://github.com" class="text-accent hover:text-blue-400 transition font-semibold hover-lift">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-accent transition-all duration-300 group hover-lift animate-stagger-1">
+        <div class="relative bg-gradient-to-br from-orange-500/20 to-orange-600/20 h-48 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-float" style="animation-delay: 0.5s">
+            <img src={projectTasks.src} alt="Task Manager" class="w-full h-full object-cover"/>
+          </div>
+          <svg class="w-24 h-24 text-accent opacity-50 group-hover:opacity-100 transition relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-slate-50">Task Management App</h3>
+          <p class="text-slate-400 mb-4">
+            A collaborative task management application with real-time updates using WebSockets. Includes team collaboration, 
+            notifications, and progress tracking features.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Next.js</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Firebase</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">TypeScript</span>
+          </div>
+          <a href="https://github.com" class="text-accent hover:text-blue-400 transition font-semibold hover-lift">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-accent transition-all duration-300 group hover-lift animate-stagger-2">
+        <div class="relative bg-gradient-to-br from-purple-500/20 to-purple-600/20 h-48 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-float" style="animation-delay: 1s">
+            <img src={projectAnalytics.src} alt="Analytics" class="w-full h-full object-cover"/>
+          </div>
+          <svg class="w-24 h-24 text-accent opacity-50 group-hover:opacity-100 transition relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2V17zm4 0h-2V7h2V17zm4 0h-2v-4h2V17z"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-slate-50">Analytics Dashboard</h3>
+          <p class="text-slate-400 mb-4">
+            A real-time analytics dashboard for monitoring application metrics. Built with React, Chart.js, and AWS. 
+            Features custom visualizations and data export capabilities.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">AWS</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Chart.js</span>
+          </div>
+          <a href="https://github.com" class="text-accent hover:text-blue-400 transition font-semibold hover-lift">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-accent transition-all duration-300 group hover-lift animate-stagger-3">
+        <div class="relative bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 h-48 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300 animate-float" style="animation-delay: 1.5s">
+            <img src={projectOpensource.src} alt="Open Source" class="w-full h-full object-cover"/>
+          </div>
+          <svg class="w-24 h-24 text-accent opacity-50 group-hover:opacity-100 transition relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-slate-50">Open Source Contribution</h3>
+          <p class="text-slate-400 mb-4">
+            Active contributor to multiple open-source projects. Helped improve performance by 30%, added new features, 
+            and maintained documentation for developer community.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">JavaScript</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Git</span>
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Community</span>
+          </div>
+          <a href="https://github.com" class="text-accent hover:text-blue-400 transition font-semibold hover-lift">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

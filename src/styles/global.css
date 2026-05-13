@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-slate-100 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-slate-50;
+  }
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Parallax background effect */
+@keyframes parallax-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -100px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors duration-200;
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 border border-secondary text-secondary rounded-lg hover:border-accent hover:text-accent transition-colors duration-200;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-slate-50;
+    animation: slideInUp 0.8s ease-out;
+  }
+
+  .card {
+    @apply bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-accent transition-all duration-300;
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  /* Animation utilities */
+  .animate-slide-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideInDown 0.6s ease-out;
+  }
+
+  .animate-slide-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  .animate-rotate {
+    animation: rotate-slow 20s linear infinite;
+  }
+
+  /* Parallax effect container */
+  .parallax-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-bg {
+    animation: parallax-bg 3s ease-in-out infinite;
+    background-attachment: fixed;
+    background-position: 0 0;
+  }
+
+  /* Stagger animations */
+  .animate-stagger-1 {
+    animation: slideInUp 0.6s ease-out 0.1s both;
+  }
+
+  .animate-stagger-2 {
+    animation: slideInUp 0.6s ease-out 0.2s both;
+  }
+
+  .animate-stagger-3 {
+    animation: slideInUp 0.6s ease-out 0.3s both;
+  }
+
+  .animate-stagger-4 {
+    animation: slideInUp 0.6s ease-out 0.4s both;
+  }
+
+  /* Image animation */
+  .image-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Gradient animation */
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
