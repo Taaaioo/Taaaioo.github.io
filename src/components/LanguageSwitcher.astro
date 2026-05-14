@@ -59,7 +59,7 @@ import { setLanguage } from '../i18n/translations';
     
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', (event) => {
-        const lang = (event.target as HTMLButtonElement).closest('.lang-btn')?.dataset.lang as Language;
+        const lang = (event.currentTarget as HTMLButtonElement).dataset.lang as Language;
         if (lang) {
           setLanguage(lang);
           updateLanguageUI(lang);
