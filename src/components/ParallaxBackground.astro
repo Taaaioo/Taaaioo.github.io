@@ -1,0 +1,44 @@
+---
+// Parallax Background Component
+interface Props {
+  backgroundImage?: string;
+  speed?: number;
+}
+
+const { 
+  backgroundImage = '/default-bg.jpg', 
+  speed = 0.5 
+} = Astro.props;
+---
+
+<div 
+  class="parallax-container relative overflow-hidden" 
+  style="background-image: url({backgroundImage})"
+  data-parallax-speed={speed}
+>
+  <div class="parallax-bg absolute inset-0 bg-cover bg-center transform transition-transform duration-300" style="background-image: url({backgroundImage})"></div>
+  <slot />
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+  
+  window.addEventListener('scroll', () => {
+    parallaxElements.forEach((el) => {
+      const speed = parseFloat(el.getAttribute('data-parallax-speed') || '0.5');
+      const yPos = -(window.pageYOffset * speed);
+      el.querySelector('.parallax-bg').style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+    });
+  });
+});
+</script>
+
+<style>
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+</style>

@@ -230,4 +230,107 @@
       background-position: 0% 50%;
     }
   }
+
+  /* Enhanced animations */
+  @keyframes shimmer {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2), 0 0 20px rgba(139, 92, 246, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Header link underline effect */
+  .header-link {
+    @apply relative px-2 py-1 text-slate-300 transition-colors duration-300;
+  }
+
+  .header-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-accent transition-all duration-300;
+  }
+
+  .header-link:hover::after {
+    @apply w-full;
+  }
+
+  .header-link:hover {
+    @apply text-accent;
+  }
+
+  /* Language switcher animations */
+  .lang-btn {
+    animation: slideInUp 0.4s ease-out;
+  }
+
+  .lang-btn.active {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  /* Enhanced cards */
+  .card-hover {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-glow-accent;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-accent bg-clip-text text-transparent;
+  }
+
+  /* Glowing effect for interactive elements */
+  .glow-on-hover:hover {
+    @apply shadow-glow-accent;
+  }
+
+  /* Smooth transitions */
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-accent/50 text-slate-50;
+  }
+
+  /* Scroll bar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
 }
